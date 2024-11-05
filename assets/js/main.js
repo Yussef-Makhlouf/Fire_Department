@@ -2,9 +2,7 @@
 (function() {
   "use strict";
 
-  /**
-   * Apply .scrolled class to the body as the page is scrolled down
-   */
+
   function toggleScrolled() {
     const selectBody = document.querySelector('body');
     const selectHeader = document.querySelector('#header');
@@ -15,9 +13,7 @@
   document.addEventListener('scroll', toggleScrolled);
   window.addEventListener('load', toggleScrolled);
 
-  /**
-   * Mobile nav toggle
-   */
+
   const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
 
   function mobileNavToogle() {
@@ -27,9 +23,6 @@
   }
   mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
 
-  /**
-   * Hide mobile nav on same-page/hash links
-   */
   document.querySelectorAll('#navmenu a').forEach(navmenu => {
     navmenu.addEventListener('click', () => {
       if (document.querySelector('.mobile-nav-active')) {
@@ -39,9 +32,7 @@
 
   });
 
-  /**
-   * Toggle mobile nav dropdowns
-   */
+
   document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
     navmenu.addEventListener('click', function(e) {
       e.preventDefault();
@@ -51,9 +42,7 @@
     });
   });
 
-  /**
-   * Preloader
-   */
+
   const preloader = document.querySelector('#preloader');
   if (preloader) {
     window.addEventListener('load', () => {
@@ -61,9 +50,7 @@
     });
   }
 
-  /**
-   * Scroll top button
-   */
+
   let scrollTop = document.querySelector('.scroll-top');
 
   function toggleScrollTop() {
@@ -82,9 +69,7 @@
   window.addEventListener('load', toggleScrollTop);
   document.addEventListener('scroll', toggleScrollTop);
 
-  /**
-   * Animation on scroll function and init
-   */
+
   function aosInit() {
     AOS.init({
       duration: 600,
@@ -95,16 +80,12 @@
   }
   window.addEventListener('load', aosInit);
 
-  /**
-   * Initiate glightbox
-   */
+
   const glightbox = GLightbox({
     selector: '.glightbox'
   });
 
-  /**
-   * Init isotope layout and filters
-   */
+
   document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
     let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
     let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
@@ -135,9 +116,7 @@
 
   });
 
-  /**
-   * Init swiper sliders
-   */
+
   function initSwiper() {
     document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
       let config = JSON.parse(
@@ -154,9 +133,7 @@
 
   window.addEventListener("load", initSwiper);
 
-  /**
-   * Initiate Pure Counter
-   */
+
   new PureCounter();
 
 })();
