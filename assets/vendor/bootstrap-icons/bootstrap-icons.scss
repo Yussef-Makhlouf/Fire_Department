@@ -1,8 +1,4 @@
-/*!
- * Bootstrap Icons v1.11.3 (https://icons.getbootstrap.com/)
- * Copyright 2019-2024 The Bootstrap Authors
- * Licensed under MIT (https://github.com/twbs/icons/blob/main/LICENSE)
- */
+
 
 $bootstrap-icons-font: "bootstrap-icons" !default;
 $bootstrap-icons-font-dir: "./fonts" !default;
@@ -31,7 +27,6 @@ $bootstrap-icons-font-src: url("#{$bootstrap-icons-font-file}.woff2?#{$bootstrap
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 $bootstrap-icons-map: (
   "123": "\f67f",
   "alarm-fill": "\f101",
